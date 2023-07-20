@@ -3,6 +3,1165 @@ entries:
   gluu:
   - annotations:
       artifacthub.io/changes: |
+        - Chart 5.0.19 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: ghcr.io/janssenproject/jans/auth-server:1.0.15_dev
+        - name: auth-server-key-rotation
+          image: ghcr.io/janssenproject/jans/certmanager:1.0.15_dev
+        - name: configuration-manager
+          image: ghcr.io/janssenproject/jans/configurator:1.0.15_dev
+        - name:  config-api
+          image: ghcr.io/janssenproject/jans/config-api:1.0.15_dev
+        - name: fido2
+          image: ghcr.io/janssenproject/jans/fido2:1.0.15_dev
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: ghcr.io/janssenproject/jans/persistence-loader:1.0.15_dev
+        - name: scim
+          image: ghcr.io/janssenproject/jans/scim:1.0.15_dev
+        - name: casa
+          image: ghcr.io/gluufederation/flex/casa:5.0.0_dev
+        - name: admin-ui
+          image: ghcr.io/gluufederation/flex/admin-ui:1.0.15_dev
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.369733048-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.19
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.19
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.19
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.19
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.19
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.19
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.19
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.19
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.19
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.19
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.19
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.19
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.19
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.19
+    description: Gluu Access and Identity Management
+    digest: b527dbfe27ab79087e62f89f49488715aab9c51c35cf83cc878ca9381580ad48
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.19.tgz
+    version: 5.0.19
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.18 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: ghcr.io/janssenproject/jans/auth-server:1.0.14_dev
+        - name: auth-server-key-rotation
+          image: ghcr.io/janssenproject/jans/certmanager:1.0.14_dev
+        - name: configuration-manager
+          image: ghcr.io/janssenproject/jans/configurator:1.0.14_dev
+        - name:  config-api
+          image: ghcr.io/janssenproject/jans/config-api:1.0.14_dev
+        - name: fido2
+          image: ghcr.io/janssenproject/jans/fido2:1.0.14_dev
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: ghcr.io/janssenproject/jans/persistence-loader:1.0.14_dev
+        - name: scim
+          image: ghcr.io/janssenproject/jans/scim:1.0.14_dev
+        - name: casa
+          image: ghcr.io/gluufederation/flex/casa:5.0.0_dev
+        - name: admin-ui
+          image: ghcr.io/gluufederation/flex/admin-ui:1.0.14_dev
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.36012401-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.18
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.18
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.18
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.18
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.18
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.18
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.18
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.18
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.18
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.18
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.18
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.18
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.18
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.18
+    description: Gluu Access and Identity Management
+    digest: 50de8cfb02de15a2394703945e41b42cdd7d9f8aee3c04762ae566b3835625a3
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.18.tgz
+    version: 5.0.18
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.17 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: ghcr.io/janssenproject/jans/auth-server:1.0.13_dev
+        - name: auth-server-key-rotation
+          image: ghcr.io/janssenproject/jans/certmanager:1.0.13_dev
+        - name: configuration-manager
+          image: ghcr.io/janssenproject/jans/configurator:1.0.13_dev
+        - name:  config-api
+          image: ghcr.io/janssenproject/jans/config-api:1.0.13_dev
+        - name: fido2
+          image: ghcr.io/janssenproject/jans/fido2:1.0.13_dev
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: ghcr.io/janssenproject/jans/persistence-loader:1.0.13_dev
+        - name: scim
+          image: ghcr.io/janssenproject/jans/scim:1.0.13_dev
+        - name: casa
+          image: ghcr.io/gluufederation/flex/casa:5.0.0_dev
+        - name: admin-ui
+          image: ghcr.io/gluufederation/flex/admin-ui:1.0.13_dev
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.350526942-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.17
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.17
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.17
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.17
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.17
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.17
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.17
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.17
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.17
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.17
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.17
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.17
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.17
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.17
+    description: Gluu Access and Identity Management
+    digest: 1233b231ae9771b1c8475a13dfff592bd782b44a7d051acda8b4677d0b021259
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.17.tgz
+    version: 5.0.17
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.16 dev release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: ghcr.io/janssenproject/jans/auth-server:1.0.13_dev
+        - name: auth-server-key-rotation
+          image: ghcr.io/janssenproject/jans/certmanager:1.0.13_dev
+        - name: configuration-manager
+          image: ghcr.io/janssenproject/jans/configurator:1.0.13_dev
+        - name:  config-api
+          image: ghcr.io/janssenproject/jans/config-api:1.0.13_dev
+        - name: fido2
+          image: ghcr.io/janssenproject/jans/fido2:1.0.13_dev
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: ghcr.io/janssenproject/jans/persistence-loader:1.0.13_dev
+        - name: scim
+          image: ghcr.io/janssenproject/jans/scim:1.0.13_dev
+        - name: casa
+          image: ghcr.io/gluufederation/flex/casa:5.0.0_dev
+        - name: admin-ui
+          image: ghcr.io/gluufederation/flex/admin-ui:1.0.13_dev
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.340173812-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.16
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.16
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.16
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.16
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.16
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.16
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.16
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.16
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.16
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.16
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.16
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.16
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.16
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.16
+    description: Gluu Access and Identity Management
+    digest: 9432fef13b44be96cc85baef446fa41559b2ac9d8792e20fad9ae0e8c4aca0da
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.16.tgz
+    version: 5.0.16
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.15 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: ghcr.io/janssenproject/jans/auth-server:1.0.11-1
+        - name: auth-server-key-rotation
+          image: ghcr.io/janssenproject/jans/certmanager:1.0.11-1
+        - name: configuration-manager
+          image: ghcr.io/janssenproject/jans/configurator:1.0.11-1
+        - name:  config-api
+          image: ghcr.io/janssenproject/jans/config-api:1.0.11-1
+        - name: fido2
+          image: ghcr.io/janssenproject/jans/fido2:1.0.11-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: ghcr.io/janssenproject/jans/persistence-loader:1.0.11-1
+        - name: scim
+          image: ghcr.io/janssenproject/jans/scim:1.0.11-1
+        - name: casa
+          image: ghcr.io/gluufederation/flex/casa:5.0.0-11
+        - name: admin-ui
+          image: ghcr.io/gluufederation/flex/admin-ui:1.0.11-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.330900465-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.15
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.15
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.15
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.15
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.15
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.15
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.15
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.15
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.15
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.15
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.15
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.15
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.15
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.15
+    description: Gluu Access and Identity Management
+    digest: 2abda1808dfe51951fa46925aa81bd6d9a9ff2aecc33169f75b61ff8175d2d29
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.15.tgz
+    version: 5.0.15
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.14 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.10-1
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.10-1
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.10-1
+        - name:  config-api
+          image: janssenproject/config-api:1.0.10-1
+        - name: fido2
+          image: janssenproject/fido2:1.0.10-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.10-1
+        - name: scim
+          image: janssenproject/scim:1.0.10-1
+        - name: casa
+          image: gluufederation/casa:5.0.0_dev
+        - name: admin-ui
+          image: gluufederation/admin-ui:1.0.10-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.321096896-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.14
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.14
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.14
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.14
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.14
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.14
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.14
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.14
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.14
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.14
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.14
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.14
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.14
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.14
+    description: Gluu Access and Identity Management
+    digest: 151c3f4a61d434149111faa16de2c86de24edd5a08b2e0e5be30e918c80c98c2
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.14.tgz
+    version: 5.0.14
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.12 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.8-1
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.8-1
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.8-1
+        - name:  config-api
+          image: janssenproject/config-api:1.0.8-1
+        - name: fido2
+          image: janssenproject/fido2:1.0.8-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.8-1
+        - name: scim
+          image: janssenproject/scim:1.0.8-1
+        - name: casa
+          image: gluufederation/casa:5.0.0_dev
+        - name: admin-ui
+          image: gluufederation/admin-ui:1.0.8-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.311436528-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.13
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.13
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.13
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.13
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.13
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.13
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.13
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.13
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.13
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.13
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.13
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.13
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.13
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.13
+    description: Gluu Access and Identity Management
+    digest: 4d57575e54b6e48c0e0a132f3535c5dbaac773dc119a4e8200b72780fa146739
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.13.tgz
+    version: 5.0.13
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.12 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.8-1
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.8-1
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.8-1
+        - name:  config-api
+          image: janssenproject/config-api:1.0.8-1
+        - name: fido2
+          image: janssenproject/fido2:1.0.8-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.8-1
+        - name: scim
+          image: janssenproject/scim:1.0.8-1
+        - name: casa
+          image: gluufederation/casa:5.0.0_dev
+        - name: admin-ui
+          image: gluufederation/admin-ui:1.0.8-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.30197681-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.12
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.12
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.12
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.12
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.12
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.12
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.12
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.12
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.12
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.12
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.12
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.12
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.12
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.12
+    description: Gluu Access and Identity Management
+    digest: ed43401bb31e1cb640934df92f0a5867a688322f5064e86270b8bda5a42846be
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.12.tgz
+    version: 5.0.12
+  - annotations:
+      artifacthub.io/changes: |
+        - Chart 5.0.11 official release
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.8_dev
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.8_dev
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.8_dev
+        - name:  config-api
+          image: janssenproject/config-api:1.0.8_dev
+        - name: fido2
+          image: janssenproject/fido2:1.0.8_dev
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.8_dev
+        - name: scim
+          image: janssenproject/scim:1.0.8_dev
+        - name: casa
+          image: gluufederation/casa:5.0.0_dev
+        - name: admin-ui
+          image: gluufederation/admin-ui:1.0.8_dev
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.292203361-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.11
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.11
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.11
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.11
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.11
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.11
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.11
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.11
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.11
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.11
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.11
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.11
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.11
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.11
+    description: Gluu Access and Identity Management
+    digest: d515819691219358214aa9a08e11a446ec6bd00d9641120ded2899dff404e8c2
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.11.tgz
+    version: 5.0.11
+  - annotations:
+      artifacthub.io/changes: |
+        - Update always
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.2-1
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.2-1
+        - name:  client-api
+          image: janssenproject/client-api:1.0.2-1
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.2-1
+        - name:  config-api
+          image: janssenproject/config-api:1.0.2-1
+        - name: fido2
+          image: janssenproject/fido2:1.0.2-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.2-1
+        - name: scim
+          image: janssenproject/scim:1.0.2-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.431236277-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.7
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.7
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.7
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.7
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.7
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.7
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.7
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.7
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.7
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.7
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.7
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.7
+    - condition: global.client-api.enabled
+      name: client-api
+      repository: ""
+      version: 5.0.7
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.7
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.7
+    description: Gluu Access and Identity Management
+    digest: b7fb27d0d8d34ddf330604974ff04bddddfb6b3a0a66f266bf9791b22d3af18a
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.7.tgz
+    version: 5.0.7
+  - annotations:
+      artifacthub.io/changes: |
+        - Update always
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.2-1
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.2-1
+        - name:  client-api
+          image: janssenproject/client-api:1.0.2-1
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.2-1
+        - name:  config-api
+          image: janssenproject/config-api:1.0.2-1
+        - name: fido2
+          image: janssenproject/fido2:1.0.2-1
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.2-1
+        - name: scim
+          image: janssenproject/scim:1.0.2-1
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2023-07-20T15:35:03.421371538-03:00"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.6
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.6
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.6
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.6
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.6
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.6
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.6
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.6
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.6
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.6
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.6
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.6
+    - condition: global.client-api.enabled
+      name: client-api
+      repository: ""
+      version: 5.0.6
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.6
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.6
+    description: Gluu Access and Identity Management
+    digest: 89f27823067298d585745c0be1947aad1d1f7ca12350839070d777697d208400
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.6.tgz
+    version: 5.0.6
+  - annotations:
+      artifacthub.io/changes: |
         - Update always
       artifacthub.io/containsSecurityUpdates: "true"
       artifacthub.io/images: |
@@ -31,7 +1190,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.94122534-03:00"
+    created: "2023-07-20T15:35:03.410471887-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -138,7 +1297,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.931872186-03:00"
+    created: "2023-07-20T15:35:03.400620298-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -245,7 +1404,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.921894078-03:00"
+    created: "2023-07-20T15:35:03.390627548-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -354,7 +1513,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.911880068-03:00"
+    created: "2023-07-20T15:35:03.38088427-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -471,7 +1630,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.900941813-03:00"
+    created: "2023-07-20T15:35:03.282451013-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -588,7 +1747,7 @@ entries:
       catalog.cattle.io/release-name: gluu
     apiVersion: v2
     appVersion: 5.0.0
-    created: "2023-07-20T11:56:54.891666272-03:00"
+    created: "2023-07-20T15:35:03.273346457-03:00"
     dependencies:
     - condition: global.config.enabled
       name: config
@@ -669,4 +1828,4 @@ entries:
     urls:
     - https://mecsys.github.io/janssen-open-banking-charts/gluu-5.0.0.tgz
     version: 5.0.0
-generated: "2023-07-20T11:56:54.881808789-03:00"
+generated: "2023-07-20T15:35:03.264244641-03:00"
